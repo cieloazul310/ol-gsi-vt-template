@@ -5,36 +5,36 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@cieloazul310/ol-gsi-vt-style-utils@npm:^1.0.0-alpha.3":
-  version: 1.0.0-alpha.3
-  resolution: "@cieloazul310/ol-gsi-vt-style-utils@npm:1.0.0-alpha.3"
+"@cieloazul310/ol-gsi-vt-style-utils@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@cieloazul310/ol-gsi-vt-style-utils@npm:1.0.0"
   peerDependencies:
     ol: ^6.0.0 || ^7.0.0
-  checksum: 502aa3ae0f8ca24714d76556faa943f80194be8fff94919e40f2c501c1cbd9051b68fd26732e2e266fb31ded3c980f6545efa2638bdd6e6916b65a55a53bd69f
+  checksum: 117448a8b9260dfff8fdcda1ed9d8a0ac5f9afb91464e0d806d799460626f34e66c03fab9e2e0b2fec6406675fe833f4d6095189d00f441fbd3fbdad1e799e3b
   languageName: node
   linkType: hard
 
-"@cieloazul310/ol-gsi-vt-style@npm:^1.0.0-alpha.3":
-  version: 1.0.0-alpha.3
-  resolution: "@cieloazul310/ol-gsi-vt-style@npm:1.0.0-alpha.3"
+"@cieloazul310/ol-gsi-vt-style@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@cieloazul310/ol-gsi-vt-style@npm:1.0.0"
   dependencies:
-    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.0-alpha.3
+    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.0
     "@fortawesome/fontawesome-free": ^6.2.0
   peerDependencies:
     ol: ^6.0.0 || ^7.0.0
-  checksum: 4d632d45be533801c1f6906603690b17ac6deffc03413e006239a3f8362af5301978fb714bf855bd48566680b07547286dbd90183589ce3be641e2af6e1b23e4
+  checksum: e92a3544245f5651327cc6958b1ff082c83c84d9f367cd53e0867cb83e818aae6cfaa0cb651bf99c17b68f6ee0cf8d34b7f16d98e576ee776cdefba5dc33c0b4
   languageName: node
   linkType: hard
 
-"@cieloazul310/ol-gsi-vt@npm:^1.0.0-alpha.3":
-  version: 1.0.0-alpha.3
-  resolution: "@cieloazul310/ol-gsi-vt@npm:1.0.0-alpha.3"
+"@cieloazul310/ol-gsi-vt@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@cieloazul310/ol-gsi-vt@npm:1.0.0"
   dependencies:
-    "@cieloazul310/ol-gsi-vt-style": ^1.0.0-alpha.3
-    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.0-alpha.3
+    "@cieloazul310/ol-gsi-vt-style": ^1.0.0
+    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.0
   peerDependencies:
     ol: ^6.0.0 || ^7.0.0
-  checksum: 54a93a555d9c77f5d6ed8538528551bbc03bd77929d79b8c4ce372b50fc67b76aa489acee0f0163016e4858eea7fdba77206748ac15415cc05fc555d622e378a
+  checksum: fa2831dbe5a84ad8f90c790f3b0b5350fada69d36fde3746a528fdfed6de6654b31bb6a480ad849537f08d2144ad55fbad53984320058ba290ccb8f95f3f0291
   languageName: node
   linkType: hard
 
@@ -4234,7 +4234,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ol-vectortile@workspace:."
   dependencies:
-    "@cieloazul310/ol-gsi-vt": ^1.0.0-alpha.3
+    "@cieloazul310/ol-gsi-vt": ^1.0.0
     "@types/node": ^18.7.15
     "@types/webpack-dev-server": ^4.7.2
     "@types/webpack-merge": ^5.0.0
