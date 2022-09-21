@@ -1,6 +1,7 @@
 import Map from 'ol/Map';
 import View from 'ol/View';
 import { fromLonLat } from 'ol/proj';
+import { Attribution, ScaleLine, defaults as defaultControl } from 'ol/control';
 // import gsiVtLayer from './layers/gsi-vt';
 import gsiOptVtLayer from './layers/gsi-opt-vt';
 
@@ -17,6 +18,14 @@ const map = new Map({
     rotation: rotation || 0,
   }),
   layers: [gsiOptVtLayer],
+  controls: defaultControl({
+    attribution: false,
+  }).extend([
+    new Attribution({
+      collapsible: false,
+    }),
+    new ScaleLine(),
+  ]),
 });
 
 setPermalink(map);

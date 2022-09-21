@@ -1,6 +1,7 @@
 {
-  "name": "ol-vectortile",
-  "version": "1.0.0",
+  "name": "ol-gsi-vt-template",
+  "version": "1.0.1",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -15,7 +16,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@cieloazul310/ol-gsi-vt": "^1.0.0",
+    "@cieloazul310/ol-gsi-vt": "^1.0.1",
     "ol": "^7.1.0"
   },
   "devDependencies": {

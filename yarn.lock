@@ -5,36 +5,36 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@cieloazul310/ol-gsi-vt-style-utils@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@cieloazul310/ol-gsi-vt-style-utils@npm:1.0.0"
+"@cieloazul310/ol-gsi-vt-style-utils@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@cieloazul310/ol-gsi-vt-style-utils@npm:1.0.1"
   peerDependencies:
     ol: ^6.0.0 || ^7.0.0
-  checksum: 117448a8b9260dfff8fdcda1ed9d8a0ac5f9afb91464e0d806d799460626f34e66c03fab9e2e0b2fec6406675fe833f4d6095189d00f441fbd3fbdad1e799e3b
+  checksum: 6d4ceacce9e4c226c6cc6e05596ef4de1b7e8a09bc69cbbda5ea1510f585fa4413fabd5a7747eb586d9c88069814ecb17e6cff5adcd4ae1f56187f48edc42c98
   languageName: node
   linkType: hard
 
-"@cieloazul310/ol-gsi-vt-style@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@cieloazul310/ol-gsi-vt-style@npm:1.0.0"
+"@cieloazul310/ol-gsi-vt-style@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@cieloazul310/ol-gsi-vt-style@npm:1.0.1"
   dependencies:
-    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.0
-    "@fortawesome/fontawesome-free": ^6.2.0
+    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.1
+    "@fortawesome/free-solid-svg-icons": ^6.2.0
   peerDependencies:
     ol: ^6.0.0 || ^7.0.0
-  checksum: e92a3544245f5651327cc6958b1ff082c83c84d9f367cd53e0867cb83e818aae6cfaa0cb651bf99c17b68f6ee0cf8d34b7f16d98e576ee776cdefba5dc33c0b4
+  checksum: d3b4a7c645f5e0a61ec8bef747e47feae3d1a5a87b0fde49dcfe5bacb7170e01fe648658c29de757aa32828cfc1199bb56502574b636cfb42cea960a8537c7d9
   languageName: node
   linkType: hard
 
-"@cieloazul310/ol-gsi-vt@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@cieloazul310/ol-gsi-vt@npm:1.0.0"
+"@cieloazul310/ol-gsi-vt@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@cieloazul310/ol-gsi-vt@npm:1.0.1"
   dependencies:
-    "@cieloazul310/ol-gsi-vt-style": ^1.0.0
-    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.0
+    "@cieloazul310/ol-gsi-vt-style": ^1.0.1
+    "@cieloazul310/ol-gsi-vt-style-utils": ^1.0.1
   peerDependencies:
     ol: ^6.0.0 || ^7.0.0
-  checksum: fa2831dbe5a84ad8f90c790f3b0b5350fada69d36fde3746a528fdfed6de6654b31bb6a480ad849537f08d2144ad55fbad53984320058ba290ccb8f95f3f0291
+  checksum: 491b172c6496f4f3c4ff998eae177f7c679fb3cf41c9fe5a470f894abc0f4fad1be25ea70bb49000c2aa68b0dfa34139c94a8f2ba8656996694354f22bea636e
   languageName: node
   linkType: hard
 
@@ -71,10 +71,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-free@npm:^6.2.0":
+"@fortawesome/fontawesome-common-types@npm:6.2.0":
   version: 6.2.0
-  resolution: "@fortawesome/fontawesome-free@npm:6.2.0"
-  checksum: fd3fcc0a963b907110922b5ac0ca67633aea20b5034102a1f5d285830f7f7a27f9c9de0c4a30228ccd2579bd8f95581a1bbef9519c7b74632e7012d60dd57bb7
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.2.0"
+  checksum: 1d0a3340dc2d2798609195cf77f1b0db98f0d87144044eb7cd3d78745baac8509705c6ebc7cce3d9bb36c7d7358ca064f77f39d86478ab1e7aa7aadc344cfd91
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "@fortawesome/free-solid-svg-icons@npm:6.2.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.2.0
+  checksum: b5edf24be491e8493028b7fd2158fb73f3a76491087970609c0ef6a4449fd4744312fe768bfcffc90a5ef86b9980f9ab8ebb36927ba8d9854c2fa638ceadb0ac
   languageName: node
   linkType: hard
 
@@ -4234,7 +4243,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ol-vectortile@workspace:."
   dependencies:
-    "@cieloazul310/ol-gsi-vt": ^1.0.0
+    "@cieloazul310/ol-gsi-vt": ^1.0.1
     "@types/node": ^18.7.15
     "@types/webpack-dev-server": ^4.7.2
     "@types/webpack-merge": ^5.0.0
