@@ -129,7 +129,4 @@ out
 .pnp.*
 
 # dist
-dist/*.js
-dist/*.map
-dist/*.ttf
-dist/*.woff2
+dist
