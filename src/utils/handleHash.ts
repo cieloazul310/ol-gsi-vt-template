@@ -1,5 +1,5 @@
-import Map from 'ol/Map';
-import { fromLonLat, toLonLat } from 'ol/proj';
+import Map from "ol/Map";
+import { fromLonLat, toLonLat } from "ol/proj";
 
 export function parseHash(window: Window): {
   zoom: number | null;
@@ -19,13 +19,12 @@ export function parseHash(window: Window): {
       return { zoom, center, rotation };
     }
     return { zoom: null, center: null, rotation: null };
-    
   }
   return { zoom: null, center: null, rotation: null };
 }
 
 export function setPermalink(map: Map) {
-  map.on('moveend', () => {
+  map.on("moveend", () => {
     const view = map.getView();
     const zoom = view.getZoom();
     const center = toLonLat(view.getCenter());
@@ -35,6 +34,6 @@ export function setPermalink(map: Map) {
     )}/${center[1].toFixed(4)}/${rotation.toFixed(4)}`;
 
     const state = { zoom, center, rotation };
-    window.history.pushState(state, 'map', hash);
+    window.history.pushState(state, "map", hash);
   });
 }
