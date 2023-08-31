@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/ol-gsi-vt-template/',
+  base: "/ol-gsi-vt-template/",
   build: {
     sourcemap: true,
   },
