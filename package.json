@@ -2,7 +2,6 @@
   "name": "ol-gsi-vt-template",
   "version": "1.0.1",
   "private": true,
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "vite",
@@ -10,7 +9,7 @@
     "serve": "vite preview",
     "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --fix",
     "format": "prettier --parser typescript --write \"src/**/*.ts*\"",
-    "deploy": "npx gh-pages -d dist",
+    "prepare": "git config --local core.hooksPath .githooks",
     "lint-staged": "lint-staged"
   },
   "dependencies": {

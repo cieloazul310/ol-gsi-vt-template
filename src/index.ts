@@ -5,7 +5,7 @@ import { Attribution, ScaleLine, defaults as defaultControl } from 'ol/control';
 // import gsiVtLayer from './layers/gsi-vt';
 import gsiOptVtLayer from './layers/gsi-opt-vt';
 
-import { parseHash, setPermalink, setPopstate } from './utils/handleHash';
+import { parseHash, setPermalink } from './utils/handleHash';
 import './style.css';
 
 const { zoom, center, rotation } = parseHash(window);
@@ -29,4 +29,3 @@ const map = new Map({
 });
 
 setPermalink(map);
-setPopstate(map, window);
