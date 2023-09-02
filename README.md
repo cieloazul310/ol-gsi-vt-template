@@ -11,23 +11,20 @@
 ```shell
 $ git clone git@github.com:cieloazul310/ol-gsi-vt-template.git --depth=1
 $ cd ol-gsi-vt-template
-$ yarn install
+$ npm install
 
 # initialize git
 $ rm -rf .git
 $ git init
 
 # develop
-$ yarn run start
+$ npm run start
 
 # build
-$ yarn run build
+$ npm run build
 
 # format with prettier
-$ yarn run format
-
-# deploy to gh-pages
-$ yarn run deploy
+$ npm run format
 ```
 
 ## `@cieloazul310/ol-gsi-vt` パッケージについて
