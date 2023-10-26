@@ -2,21 +2,21 @@ import Map from "ol/Map";
 import View from "ol/View";
 import { fromLonLat } from "ol/proj";
 import { Attribution, ScaleLine, defaults as defaultControl } from "ol/control";
-import gsiOptVtLayer from "./layers/gsi-opt-vt";
-
-import { parseHash, setPermalink, setPopstate } from "./utils/handleHash";
+import Link from "ol/interaction/Link";
+import { geolocation, useGeolocation, GeolocationControl } from "./utils";
+import { pmtilesLayer } from "./layers";
 import "./style.css";
 
-const { zoom, center, rotation } = parseHash(window);
+const geolocationControl = new GeolocationControl({ geolocation });
 
 const map = new Map({
   target: "map",
   view: new View({
-    center: center || fromLonLat([140.46, 36.37]),
-    zoom: zoom || 12,
-    rotation: rotation || 0,
+    center: fromLonLat([140.46, 36.37]),
+    zoom: 12,
+    rotation: 0,
   }),
-  layers: [gsiOptVtLayer],
+  layers: [pmtilesLayer],
   controls: defaultControl({
     attribution: false,
   }).extend([
@@ -24,8 +24,15 @@ const map = new Map({
       collapsible: false,
     }),
     new ScaleLine(),
+    geolocationControl,
   ]),
 });
 
-setPermalink(map);
-setPopstate(map, window);
+map.addInteraction(
+  new Link({
+    params: ["x", "y", "z"],
+    replace: true,
+  }),
+);
+
+useGeolocation({ map, geolocation });

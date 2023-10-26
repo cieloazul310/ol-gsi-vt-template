@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "sourceMap": true,
-    "module": "commonjs",
     "target": "esnext",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "esnext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "useDefineForClassFields": true,
-    "jsx": "react",
-    "allowJs": true
-  }
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*", ".eslintrc.cjs", "vite.config.ts"],
+  "exclude": ["dist"]
 }

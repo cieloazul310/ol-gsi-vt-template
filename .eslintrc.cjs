@@ -8,12 +8,12 @@ module.exports = {
   },
   parserOptions: {
     sourceType: "module",
-    project: "./tsconfig.eslint.json",
+    project: "./tsconfig.json",
     ecmaVersion: "latest",
   },
   overrides: [
     {
-      files: [".eslintrc.js", "vite.config.ts"],
+      files: [".eslintrc.cjs", "vite.config.ts"],
       rules: {
         "import/no-extraneous-dependencies": "off",
       },

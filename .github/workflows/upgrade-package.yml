@@ -1,23 +1,28 @@
-name: Test
-on:
-  pull_request:
-    types: [opened, synchronize]
-    paths:
-      - package.json
-      - src/**/*
-      - .github/workflows/**
+# ref: https://zenn.dev/mizchi/articles/3117b92a834531361fc8
 
-env:
-  BUILD_PATH: "." # default value when not using subfolders
+name: Update ol-gsi-vt
+
+on:
+  repository_dispatch:
+    types: [update-ol-gsi-vt]
+  
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  pull-requests: write
 
 jobs:
-  build:
-    name: Build test
+  update-packages:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: main
       
       - name: Detect package manager
         id: detect-package-manager
@@ -42,12 +47,22 @@ jobs:
         with:
           node-version: latest
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-
+          cache-dependency-path: ./package-lock.json
+      
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        working-directory: ${{ env.BUILD_PATH }}
-
-      - name: Build project
-        run: |
-          ${{ steps.detect-package-manager.outputs.manager }} run build
+      
+      - name: Upgrade ol-gsi-vt
+        run: npx npm-check-updates @cieloazul310/ol-gsi-vt --upgrade --install always
+      
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'update @cieloazul310/ol-gsi-vt'
+          base: main
+          branch: update_package
+          branch-suffix: short-commit-hash
+          delete-branch: true
+          title: 'update ol-gsi-vt'
