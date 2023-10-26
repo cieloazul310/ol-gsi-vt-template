@@ -4,7 +4,9 @@ on:
     types: [opened, synchronize]
     paths:
       - package.json
+      - package-lock.json
       - src/**/*
+      - vite.config.ts
       - .github/workflows/**
 
 env:
