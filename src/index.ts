@@ -4,7 +4,7 @@ import { fromLonLat } from "ol/proj";
 import { Attribution, ScaleLine, defaults as defaultControl } from "ol/control";
 import Link from "ol/interaction/Link";
 import { geolocation, useGeolocation, GeolocationControl } from "./utils";
-import gsiOptVtLayer from "./layers/gsi-opt-vt";
+import { pmtilesLayer } from "./layers";
 import "./style.css";
 
 const geolocationControl = new GeolocationControl({ geolocation });
@@ -16,7 +16,7 @@ const map = new Map({
     zoom: 12,
     rotation: 0,
   }),
-  layers: [gsiOptVtLayer],
+  layers: [pmtilesLayer],
   controls: defaultControl({
     attribution: false,
   }).extend([
