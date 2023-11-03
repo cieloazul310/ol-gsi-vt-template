@@ -3,11 +3,16 @@ import View from "ol/View";
 import { fromLonLat } from "ol/proj";
 import { Attribution, ScaleLine, defaults as defaultControl } from "ol/control";
 import Link from "ol/interaction/Link";
-import { geolocation, useGeolocation, GeolocationControl } from "./utils";
-import { pmtilesLayer } from "./layers";
+import Geolocation from "ol/Geolocation";
+import { useGeolocation, GeolocationControl } from "./utils";
+import { optVtLayer } from "./layers";
 import "./style.css";
 
-const geolocationControl = new GeolocationControl({ geolocation });
+const geolocation = new Geolocation({
+  trackingOptions: {
+    enableHighAccuracy: true,
+  },
+});
 
 const map = new Map({
   target: "map",
@@ -16,7 +21,7 @@ const map = new Map({
     zoom: 12,
     rotation: 0,
   }),
-  layers: [pmtilesLayer],
+  layers: [optVtLayer],
   controls: defaultControl({
     attribution: false,
   }).extend([
@@ -24,7 +29,7 @@ const map = new Map({
       collapsible: false,
     }),
     new ScaleLine(),
-    geolocationControl,
+    new GeolocationControl({ geolocation }),
   ]),
 });
 
