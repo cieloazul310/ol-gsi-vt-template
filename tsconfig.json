@@ -16,6 +16,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*", ".eslintrc.cjs", "vite.config.ts"],
+  "include": ["src/**/*", ".eslintrc.cjs", "vite.config.mts"],
   "exclude": ["dist"]
 }
