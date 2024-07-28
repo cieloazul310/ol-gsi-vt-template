@@ -14,7 +14,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@cieloazul310/ol-gsi-vt": "^1.3.1",
+    "@cieloazul310/ol-gsi-vt": "^1.4.0",
     "ol": "^9.0.0"
   },
   "devDependencies": {
