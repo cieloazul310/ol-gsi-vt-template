@@ -14,11 +14,11 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@cieloazul310/ol-gsi-vt": "^1.4.3",
-    "ol": "^10.0.0"
+    "@cieloazul310/ol-gsi-vt": "^1.4.6",
+    "ol": "^10.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.12",
+    "@types/node": "^22.5.0",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
     "@typescript-eslint/parser": "^7.17.0",
     "eslint": "^8.57.0",
@@ -29,7 +29,7 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
-    "vite": "^5.3.5"
+    "vite": "^5.4.2"
   },
   "lint-staged": {
     "./src/**/*.{js,ts}": [
