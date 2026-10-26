@@ -1,2 +1,2 @@
-export { default as GeolocationControl } from "./geolocationControl";
-export { default as useGeolocation } from "./useGeolocation";
+export * from "./geolocation-control";
+export * from "./use-geolocation";
